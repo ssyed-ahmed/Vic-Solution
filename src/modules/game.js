@@ -31,8 +31,7 @@ export class Game {
             console.log('Removed children');
             console.log(this.removedChildren);		
             
-            this.childArray = [];
-            this.removedChildren = [];
+            Game.resetGame();
             
 			return;
 		}
@@ -43,5 +42,18 @@ export class Game {
 		this.childArray.splice(index, 1);
 		startPos += 1;
 		Game.startGame(k, startPos);
-	}
+    }
+    
+    static getChildArray() {
+        return this.childArray;
+    }
+
+    static getRemovedChildrenArray() {
+        return this.removedChildren;
+    }
+
+    static resetGame() {
+        this.childArray = [];
+        this.removedChildren = [];
+    }
 }
