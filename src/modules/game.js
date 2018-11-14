@@ -6,6 +6,8 @@ export class Game {
         this.childArray = [];
 	
         this.removedChildren = [];
+
+        this.winner = null;
     }
 
 	static initializeChildArray(arrayLength) {
@@ -19,21 +21,13 @@ export class Game {
 			let child = new Child(i+1);
 			this.childArray.push(child);
         }
-        console.log("Children's array");
-        console.log(this.childArray);
         return this.childArray.length;
 	}
 
 	static startGame(k, startPos) {
         if (this.childArray.length === 1) {
-			console.log('Winner is');
-            console.log(this.childArray[0]);
-            console.log('Removed children');
-            console.log(this.removedChildren);		
-            
-            Game.resetGame();
-            
-			return;
+			this.winner = this.childArray[0];
+            return;
 		}
 		let rem = (k + startPos) % this.childArray.length;
 		let index = rem === 0 ? this.childArray.length - 1: rem - 1;			
@@ -55,5 +49,9 @@ export class Game {
     static resetGame() {
         this.childArray = [];
         this.removedChildren = [];
+    }
+
+    static getWinner() {
+        return this.winner;
     }
 }

@@ -27,8 +27,12 @@
         </style>
     </head>
     <body>
-        <h1>Start Game</h1>
-        <div class="container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>Start Game</h1>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-xs-12">
                     <form>
@@ -55,18 +59,20 @@
                     <button class="btn btn-primary" id="startButton">Start Game</button>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h3>Winner is Child with Id = <span id="winner"></span></h3>
+                </div>
+            </div>
+            <div class="row">
+                <h3 class="col-xs-12">
+                    <h3>The removed children are in the following sequence: </h3>
+                    <h3 id="removedIds"></h3>
+                </div>
+            </div>
         </div>
         
-        <!-- <label for="numChildren">Enter number of children: </label>
-        <input type="number" name="numChildren" id="numChildren" value="5">
-        <br>
-        <label for="count">Enter count: </label>
-        <input type="number" name="count" id="count" value="15">
-        <br>
-        <label for="startPos">Enter start position: </label>
-        <input type="number" name="startPos" id="startPos" value="0">
-        <br>
-        <button id="startButton">Start Game</button> -->
+        
         <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

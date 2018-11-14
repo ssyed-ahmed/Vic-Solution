@@ -17,7 +17,16 @@ button.on('click', () => {
         return;
     }
     Game.startGame(count, startPos);
-
+    let winner = Game.getWinner();
+    $('#winner').text(winner.id);
+    let removedChildren = Game.getRemovedChildrenArray();
+    let result = '';
+    for (let i = 0; i < removedChildren.length; i++) {
+        let child = removedChildren[i];
+        result += child.id + ' ';
+    }
+    $('#removedIds').text(result);
+    Game.resetGame();
 })
 
 
