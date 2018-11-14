@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Getting started with webpack and ES6 modules – the demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-family: sans-serif;
+                margin: 0 auto;
+                max-width: 30rem;
+            }
+            a {
+                color: RoyalBlue;
+            }
+            .results {
+                background-color: WhiteSmoke;
+                display: inline-block;
+                margin: 1rem 0;
+                padding: .5rem 1.5rem;
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Start Game</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <form>
+                        <div class="form-group">
+                            <label for="numChildren">Number of children</label>
+                            <input type="number"
+                                class="form-control" id="numChildren" name="numChildren" placeholder="5" value="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="count">Count</label>
+                            <input type="number"
+                                class="form-control" id="count" name="count" placeholder="15" value="15">
+                        </div>
+                        <div class="form-group">
+                            <label for="startPos">Start Position</label>
+                            <input type="number"
+                                class="form-control" id="startPos" name="startPos" placeholder="3" value="3">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="btn btn-primary" id="startButton">Start Game</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- <label for="numChildren">Enter number of children: </label>
+        <input type="number" name="numChildren" id="numChildren" value="5">
+        <br>
+        <label for="count">Enter count: </label>
+        <input type="number" name="count" id="count" value="15">
+        <br>
+        <label for="startPos">Enter start position: </label>
+        <input type="number" name="startPos" id="startPos" value="0">
+        <br>
+        <button id="startButton">Start Game</button> -->
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>            
+        <script src="./dist/dist/bundle.js"></script>
+    </body>
+</html>

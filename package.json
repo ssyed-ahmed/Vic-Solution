@@ -1,0 +1,17 @@
+{
+  "name": "vic-solution",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "npm run webpack",
+    "webpack": "webpack -d --watch"
+  },
+  "author": "Sumair Ahmed Syed",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.25.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.1.2"
+  }
+}
