@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "start": "npm run webpack",
-    "webpack": "webpack -d --watch"
+    "webpack": "webpack -d --watch",
+    "test": "mocha --compilers js:@babel/register ./test/**/*.spec.js"
   },
   "author": "Sumair Ahmed Syed",
   "license": "ISC",
@@ -12,6 +13,14 @@
     "webpack": "^4.25.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "chai": "^4.2.0",
+    "gulp-babel": "^8.0.0",
+    "mocha": "^5.2.0",
     "webpack-cli": "^3.1.2"
   }
 }
