@@ -37,9 +37,17 @@ describe('Game', () => {
 
     it('should return a child object when game is started', () => {
         Game.initializeChildArray(5);
-        let obj = Game.startGame(10, 1);
-        console.log('######');
-        console.log(obj);
-        expect(obj).to.be.an.instanceof(Child);
+        Game.startGame(10, 1);
+        let winner = Game.getWinner();
+        expect(winner).to.be.an.instanceof(Child);
+        Game.resetGame();
+    })
+
+    it('should return a child object with id 3', () => {
+        Game.initializeChildArray(5);
+        Game.startGame(10, 1);
+        let winner = Game.getWinner();
+        expect(winner.id).to.equal(3);
+        Game.resetGame();
     })
 })
